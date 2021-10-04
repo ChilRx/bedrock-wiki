@@ -19,19 +19,19 @@ You can [learn more about materials here](/visuals/materials).
 | entity_alphablend                         | Useful for translucent textures |
 | entity_alphablend_nocolorentity_static    |                                 |
 | entity_alphatest                          | For transparancy and disables backface culling[¹](#1)|
-| entity_alphatest_change_color             | For entities that use transparent pixels and get colored in by the game such as leather armor|
+| entity_alphatest_change_color             | For entities that use transparent[²](#2) pixels and get colored in by the game such as leather armor|
 | entity_alphatest_change_color_glint       | Same as `entity_alphatest_change_color` but with enchantment glint over it|
-| entity_alphatest_glint                    | This will allow for transparency and add enchantment glint overlay|
+| entity_alphatest_glint                    | This will allow for transparency[²](#2) and add enchantment glint overlay|
 | entity_alphatest_glint_item               | Same as `entity_alphatest_glint`|
 | entity_alphatest_multicolor_tint          |                                 |
 | entity_beam                               |                                 |
 | entity_beam_additive                      |                                 |
-| entity_change_color                       | For entities that will be colored by the game such as sheep and wolf, this material does not allow for transparency|
+| entity_change_color                       | For entities that will be colored by the game such as sheep and wolf, this material does not allow for transparency[²](#2)|
 | entity_change_color_glint                 | Same as `entity_change_color` but with enchantment glint overlay|
-| entity_custom                             | This will allow transparent and translucent textures and has backface culling[¹](#1)|
+| entity_custom                             | This will allow transparent[²](#2) and translucent textures and has backface culling[¹](#1)|
 | entity_dissolve_layer0                    |                                 |
 | entity_dissolve_layer1                    |                                 |
-| entity_emissive                           | Allows entities to ignore light any transparent pixels will become opaque. You can control how much light the entity can ignore by it's pixel's alpha value, the lower the value the more light it ignores. This material has backface culling[¹](#1)|
+| entity_emissive                           | Allows entities to ignore light. Any transparent[²](#2) pixels will become opaque. You can control how much light the entity can ignore by it's pixel's alpha value, the lower the value the more light it ignores. This material has backface culling[¹](#1)|
 | entity_emissive_alpha                     |                                 |
 | entity_emissive_alpha_one_sided           |                                 |
 | entity_flat_color_line                    |                                 |
@@ -69,7 +69,7 @@ You can [learn more about materials here](/visuals/materials).
 
 <a name="1"></a>  **Backface Culling**: removes any faces of the entity model that is not facing the player. Meaning if the camera is inside of a cube it is possible can see what is outside without the entity texture obstructing the camera. This feature is used for signs, chests, boats, bells etc.
 
-<a name="2"></a> 
+<a name="2"></a> **Transparency**: Makes pixels with alpha value under 0.5 (50%) invisible
 
 
 [Original Credit](http://tokamcwin10.blog.jp/archives/40825563)
